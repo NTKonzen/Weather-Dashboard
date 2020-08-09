@@ -46,10 +46,10 @@
 
             <div class="col-8">
                 <div class="row border rounded pt-4 px-1 pb-2">
-                    <h3 class='col-12 mb-3'>City (MM/DD/YYYY) icon</h3>
-                    <p class='col-12'>Temperature: <span id='tempSpan'>&#8457;</span></p>
-                    <p class="col-12">Humidity: <span id='humiditySpan'></span></p>
-                    <p class="col-12">Wind Speed: <span id='windSpan'></span></p>
+                    <h3 class='col-12 mb-3'><span id='citySpan'></span> (<span id='dateSpan'></span>) <img id='icon'></h3>
+                    <p class='col-12'>Temperature: <span id='tempSpan'></span> &#8457;</p>
+                    <p class="col-12">Humidity: <span id='humiditySpan'></span>%</p>
+                    <p class="col-12">Wind Speed: <span id='windSpan'></span> MPH</p>
                     <p class="col-12">UV Index: <span class='bg-danger rounded text-light p-1' id='uvSpan'>9.49</span></p>
                 </div>
                 <div class="row mt-3">
@@ -94,8 +94,10 @@
     </main>
 
     <!-- jQuery Link -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- Moment.js Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <!-- Local Javascript Link -->
     <script src="./assets/script.js"></script>
