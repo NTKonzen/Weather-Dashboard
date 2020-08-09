@@ -34,12 +34,7 @@
                     <input id='citySearchInput' placeholder="Enter City Name">
                     <button class="btn btn-primary" id="citySearchBtn"><i class="fas fa-search"></i></button>
                 </form>
-                <div class='border rounded'>
-                    <h6 class='border-bottom p-3 mb-0 text-muted font-weight-light'>Austin</h6>
-                    <h6 class='border-bottom p-3 mb-0 text-muted font-weight-light'>Austin</h6>
-                    <h6 class='border-bottom p-3 mb-0 text-muted font-weight-light'>Austin</h6>
-                    <h6 class='border-bottom p-3 mb-0 text-muted font-weight-light'>Austin</h6>
-                    <h6 class='border-bottom p-3 mb-0 text-muted font-weight-light'>Austin</h6>
+                <div class='border rounded' id='cityList'>
                     <h6 class='border-bottom p-3 mb-0 text-muted font-weight-light'>Austin</h6>
                 </div>
             </div>
@@ -50,41 +45,41 @@
                     <p class='col-12'>Temperature: <span id='tempSpan'></span> &#8457;</p>
                     <p class="col-12">Humidity: <span id='humiditySpan'></span>%</p>
                     <p class="col-12">Wind Speed: <span id='windSpan'></span> MPH</p>
-                    <p class="col-12">UV Index: <span class='bg-danger rounded text-light p-1' id='uvSpan'>9.49</span></p>
+                    <p class="col-12">UV Index: <span class='rounded text-light p-1' id='uvSpan'>9.49</span></p>
                 </div>
                 <div class="row mt-3">
                     <h3>5-Day Forecast:</h3>
                 </div>
                 <div class="row justify-content-around">
                     <div class="col bg-primary mr-2 rounded text-light pt-2 pl-2 pb-1">
-                        <h6>DD/MM/YYYY</h6>
-                        <i class="fas fa-sun"></i>
-                        <p class='mt-2'>Temp: <span class='forecastTemp'></span></p>
-                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span></p>
+                        <h6 class='forecastDate'>DD/MM/YYYY</h6>
+                        <img class='forecastIcon'>
+                        <p class='mt-2'>Temp: <span class='forecastTemp'></span> &#8457;</p>
+                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span>%</p>
                     </div>
                     <div class="col bg-primary mr-2 rounded text-light pt-2 pl-2 pb-1">
-                        <h6>DD/MM/YYYY</h6>
-                        <i class="fas fa-sun"></i>
-                        <p class='mt-2'>Temp: <span class='forecastTemp'></span></p>
-                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span></p>
+                        <h6 class='forecastDate'>DD/MM/YYYY</h6>
+                        <img class='forecastIcon'>
+                        <p class='mt-2'>Temp: <span class='forecastTemp'></span> &#8457;</p>
+                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span>%</p>
                     </div>
                     <div class="col bg-primary mr-2 rounded text-light pt-2 pl-2 pb-1">
-                        <h6>DD/MM/YYYY</h6>
-                        <i class="fas fa-sun"></i>
-                        <p class='mt-2'>Temp: <span class='forecastTemp'></span></p>
-                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span></p>
+                        <h6 class='forecastDate'>DD/MM/YYYY</h6>
+                        <img class='forecastIcon'>
+                        <p class='mt-2'>Temp: <span class='forecastTemp'> &#8457;</span></p>
+                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span>%</p>
                     </div>
                     <div class="col bg-primary mr-2 rounded text-light pt-2 pl-2 pb-1">
-                        <h6>DD/MM/YYYY</h6>
-                        <i class="fas fa-sun"></i>
-                        <p class='mt-2'>Temp: <span class='forecastTemp'></span></p>
-                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span></p>
+                        <h6 class='forecastDate'>DD/MM/YYYY</h6>
+                        <img class='forecastIcon'>
+                        <p class='mt-2'>Temp: <span class='forecastTemp'></span> &#8457;</p>
+                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span>%</p>
                     </div>
                     <div class="col bg-primary mr-2 rounded text-light pt-2 pl-2 pb-1">
-                        <h6>DD/MM/YYYY</h6>
-                        <i class="fas fa-sun"></i>
-                        <p class='mt-2'>Temp: <span class='forecastTemp'></span></p>
-                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span></p>
+                        <h6 class='forecastDate'>DD/MM/YYYY</h6>
+                        <img class='forecastIcon'>
+                        <p class='mt-2'>Temp: <span class='forecastTemp'></span> &#8457;</p>
+                        <p class='mb-1'>Humidity: <span class='forecastHumidity'></span>%</p>
                     </div>
                 </div>
             </div>
