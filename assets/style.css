@@ -6,3 +6,11 @@
     position: relative;
     bottom: 2px;
 }
+
+#uvSpan {
+    color: black;
+}
+
+h6:hover {
+    background-color: rgb(192, 223, 235);
+}

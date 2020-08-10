@@ -1,8 +1,6 @@
 $('#citySearchInput').outerHeight($('#citySearchBtn').outerHeight());
 
 $(document).ready(function() {
-    
-    $('#dateSpan').text(moment().format('L'))
 
     function displayWeather(city) {
         $.ajax({
@@ -27,14 +25,19 @@ $(document).ready(function() {
     
                 if (response.value > 11) {
                     $('#uvSpan').css('background-color', 'purple')
-                } else if (response.value > 3) {
+                    $('#uvSpan').attr('class', 'rounded text-light p-1')
+                } else if (response.value > 7) {
                     $('#uvSpan').css('background-color', 'red')
+                    $('#uvSpan').attr('class', 'rounded text-light p-1')
                 } else if (response.value > 5) {
                     $('#uvSpan').css('background-color', 'orange')
+                    $('#uvSpan').attr('class', 'rounded text-light p-1')
                 } else if (response.value > 2) {
                     $('#uvSpan').css('background-color', 'yellow')
+                    $('#uvSpan').attr('class', 'rounded text-dark p-1')
                 } else {
                     $('#uvSpan').css('background-color', 'green')
+                    $('#uvSpan').attr('class', 'rounded text-light p-1')
                 }
     
                 $('#uvSpan').text(response.value)
@@ -59,7 +62,40 @@ $(document).ready(function() {
         })
     }
 
-    displayWeather('San Diego')
+    let cityArray;
+
+    if (localStorage.getItem('cityList') === null || localStorage.getItem('cityList') === '') {
+        displayWeather('San Diego')
+        cityArray = ['San Diego']
+        localStorage.setItem('cityList', JSON.stringify(cityArray))
+        let newCity = $('<h6>')
+        newCity.attr('class', 'border-bottom p-3 mb-0 text-muted font-weight-light')
+        newCity.text('San Diego')
+        $('#cityList').append(newCity)
+    } else {
+        cityArray = JSON.parse(localStorage.getItem('cityList'))
+
+        displayWeather(cityArray[0])
+
+        $(cityArray).each(item => {
+            console.log(cityArray[item]);
+
+            let newCity = $('<h6>')
+            newCity.attr('class', 'border-bottom p-3 mb-0 text-muted font-weight-light')
+            newCity.text(cityArray[item])
+            $('#cityList').append(newCity)
+        })
+
+        $('h6').click((event) => {
+            console.log($(event.target).text());
+    
+            displayWeather($(event.target).text())
+        })
+        
+    }
+    
+    $('#dateSpan').text(moment().format('L'))
+
 
     $('form').submit(event => {
         event.preventDefault();
@@ -68,7 +104,26 @@ $(document).ready(function() {
         newCity.addClass('border-bottom p-3 mb-0 text-muted font-weight-light');
         newCity.text($('#citySearchInput').val())
         $('#cityList').prepend(newCity)
+
+        cityArray.unshift($('#citySearchInput').val())
+
+        if (cityArray.length > 8) {
+            cityArray.pop();
+
+            $('h6:last-of-type').remove();
+        }
+
+        localStorage.setItem('cityList', JSON.stringify(cityArray))
+
+        console.log(cityArray)
+
         $('#citySearchInput').val('')
+
+        $('h6').click((event) => {
+            console.log($(event.target).text());
+    
+            displayWeather($(event.target).text())
+        })
     })
 
 });
