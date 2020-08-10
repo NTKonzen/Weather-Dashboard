@@ -42,6 +42,10 @@ $(document).ready(function() {
     
                 $('#uvSpan').text(response.value)
             })
+
+            $('.forecastDate').each(item => {
+                $($('.forecastDate')[item]).text(moment().add(item+1, 'days').format('L'))
+            })
             
             $.ajax({
                 'url': 'https://api.openweathermap.org/data/2.5/forecast?q=' + city +'&appid=1330cf454a02f5f612b7fc468e3b4581',
