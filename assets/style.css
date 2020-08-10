@@ -14,3 +14,12 @@
 h6:hover {
     background-color: rgb(192, 223, 235);
 }
+
+.fa-times {
+    float: right;
+    transition-duration: .1s;
+}
+
+.fa-times:hover {
+    transform: scale(1.3)
+}
