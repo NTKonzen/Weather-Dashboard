@@ -24,20 +24,25 @@ $(document).ready(function() {
             }).then(response => {
     
                 if (response.value > 11) {
-                    $('#uvSpan').css('background-color', 'purple')
-                    $('#uvSpan').attr('class', 'rounded text-light p-1')
+                    $('#uvSpan').css('background-color', 'purple');
+                    $('#uvSpan').attr('class', 'rounded text-light p-1');
+                    $("body").addClass("dummyClass").removeClass("dummyClass");
                 } else if (response.value > 7) {
-                    $('#uvSpan').css('background-color', 'red')
-                    $('#uvSpan').attr('class', 'rounded text-light p-1')
+                    $('#uvSpan').css('background-color', 'red');
+                    $('#uvSpan').attr('class', 'rounded text-light p-1');
+                    $("body").addClass("dummyClass").removeClass("dummyClass");
                 } else if (response.value > 5) {
-                    $('#uvSpan').css('background-color', 'orange')
-                    $('#uvSpan').attr('class', 'rounded text-light p-1')
+                    $('#uvSpan').css('background-color', 'orange');
+                    $('#uvSpan').attr('class', 'rounded text-light p-1');
+                    $("body").addClass("dummyClass").removeClass("dummyClass");
                 } else if (response.value > 2) {
-                    $('#uvSpan').css('background-color', 'yellow')
-                    $('#uvSpan').attr('class', 'rounded text-dark p-1')
+                    $('#uvSpan').css('background-color', 'yellow');
+                    $('#uvSpan').attr('class', 'rounded text-dark p-1');
+                    $("body").addClass("dummyClass").removeClass("dummyClass");;
                 } else {
-                    $('#uvSpan').css('background-color', 'green')
-                    $('#uvSpan').attr('class', 'rounded text-light p-1')
+                    $('#uvSpan').css('background-color', 'green');
+                    $('#uvSpan').attr('class', 'rounded text-light p-1');
+                    $("body").addClass("dummyClass").removeClass("dummyClass");
                 }
     
                 $('#uvSpan').text(response.value)
@@ -80,7 +85,7 @@ $(document).ready(function() {
         displayWeather(cityArray[0])
         
         console.log(cityArray);
-        
+
         $(cityArray).each(item => {
 
             let newCity = $('<h6>')
