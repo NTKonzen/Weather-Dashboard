@@ -23,3 +23,16 @@ h6:hover {
 .fa-times:hover {
     transform: scale(1.3)
 }
+
+.error {
+    box-shadow: 0 0 1.5pt 2pt rgb(224, 43, 43);
+    border-color: rgb(224, 43, 43);
+}
+
+.error:focus {
+    outline: none;
+}
+
+.error::placeholder {
+    color: red;
+}
