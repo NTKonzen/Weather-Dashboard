@@ -53,12 +53,10 @@ $(document).ready(function() {
             }).then(response => {
                 console.log('forecast list', response);
                 $('.forecastTemp').each(item => {
-                    console.log('forecast day '+((parseInt([item]))+1), response.list[item]);
                     let temperature = Math.floor((response.list[item].main.temp - 273.15) * (9/5) + 32);
                     $($('.forecastTemp')[item]).text(temperature);
                     $($('.forecastHumidity')[item]).text(response.list[item].main.humidity)
                     $($('.forecastIcon')[item]).attr('src', 'http://openweathermap.org/img/w/' + response.list[item].weather[0].icon + '.png')
-                    console.log($($('.forecastIcon')[item]).attr('src'));
                     
                 })
             })
@@ -80,9 +78,10 @@ $(document).ready(function() {
         cityArray = JSON.parse(localStorage.getItem('cityList'))
 
         displayWeather(cityArray[0])
-
+        
+        console.log(cityArray);
+        
         $(cityArray).each(item => {
-            console.log(cityArray[item]);
 
             let newCity = $('<h6>')
             newCity.attr('class', 'border-bottom p-3 mb-0 text-muted font-weight-light')
