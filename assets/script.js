@@ -115,7 +115,7 @@ $(document).ready(function () {
                 // displays the wind speed
                 $('#windSpan').text(response.wind.speed)
                 // displays the weather as an icon
-                $('#icon').attr('src', 'http://openweathermap.org/img/w/' + response.weather[0].icon + '.png')
+                $('#icon').attr('src', 'https://openweathermap.org/img/w/' + response.weather[0].icon + '.png')
 
                 // calls the uv index from the latitude and longitude from the previous call
                 $.ajax({
@@ -202,7 +202,7 @@ $(document).ready(function () {
                         // displays the temperature, humidity, and weather icon of the forecast element
                         $($('.forecastTemp')[timeElIndex]).text(temperature);
                         $($('.forecastHumidity')[timeElIndex]).text(response.list[item].main.humidity)
-                        $($('.forecastIcon')[timeElIndex]).attr('src', 'http://openweathermap.org/img/w/' + response.list[item].weather[0].icon + '.png')
+                        $($('.forecastIcon')[timeElIndex]).attr('src', 'https://openweathermap.org/img/w/' + response.list[item].weather[0].icon + '.png')
                     })
                 })
 
