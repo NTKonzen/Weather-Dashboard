@@ -4,7 +4,6 @@
 * [Description](#description)
 * [How to Use](#how-to-use-the-weather-dashboard)
 * [Features](#features)
----
 
 ## Description ##
 
