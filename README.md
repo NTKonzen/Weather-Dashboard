@@ -6,6 +6,8 @@
 * [Features](#features)
 ---
 
+## Description ##
+
 This is a fully functional international weather dashboard with current weather, a 5-day forecast, and a dynamic search history bar. I created this project to practice my ajax and general jQuery skills as well as offer an easy to use worldwide weather dashboard for anyone who wants one. I learned quite a bit about ajax syntax and the different ways you can manipulate the data you receive from api queries. One of the outstanding features of this dashboard would be the color indication of the UV Index which I modelled after the US Environmental Protection Agency(EPA), as shown below.
 
 ![A screenshot of the color-coordinated UV Index provided by the USEPA](./assets/screenshots/uvindex.png)
@@ -14,7 +16,7 @@ This is a fully functional international weather dashboard with current weather,
 
 ## How to Use the Weather Dashboard ##
 ![A Screenshot of the Weather Dashboard](./assets/screenshots/screenshot.png)
-[Link to Deployed Application](https://ntkonzen.github.io/Weather-Dashboard/)
+[Click here to use the Weather Dashboard](https://ntkonzen.github.io/Weather-Dashboard/)
 
 1. By default, the city presented to you will be San Diego, but if you want to see the weather for a new city, enter whatever city you like into the search bar in the top left and click 'enter' or hit the search button.
     1. If nothing changes and the search bar flashes red, you may have made a spelling mistake, so please adjust your input accordingly and try again
